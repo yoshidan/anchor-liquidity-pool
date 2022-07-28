@@ -1,0 +1,9 @@
+[programs.localnet]
+anchor_liquidity_pool = "HEnMwtqH2T6bVHGwTkbbj2WBKJs6G4TztVSeUC9w1Tb1"
+
+[provider]
+cluster = "localnet"
+wallet = "/Users/01005901/.config/solana/id.json"
+
+[scripts]
+test = "ts-mocha -p tsconfig.json tests/*.ts -t 15000"

@@ -1,0 +1,31 @@
+[package]
+name = "anchor-liquidity-pool"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "anchor_liquidity_pool"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[profile.release]
+overflow-checks = true
+
+[dependencies]
+anchor-lang = "0.24.2"
+anchor-spl = "0.24.2"
+spl-token = {version = "3.3.0", features = ["no-entrypoint"]}
+spl-math = {version="0.1.0", features = [ "no-entrypoint" ]}
+thiserror = "1.0"
+enum_dispatch = "0.3.7"
+num-derive = "0.3"
+num-traits = "0.2"
+arrayref = "0.3.6"
+borsh = "0.9.3"
